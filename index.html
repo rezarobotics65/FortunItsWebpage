@@ -11,6 +11,8 @@
 </head>
 <body>
 
+<canvas id="particles-bg" aria-hidden="true"></canvas>
+
 <!-- ── Navigation ──────────────────────────────────────────── -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
@@ -21,7 +23,6 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="solutions.html">Solutions</a></li>
       <li><a href="industries.html">Industries</a></li>
-      <li><a href="partnerships.html">Partnerships</a></li>
       <li><a href="case-studies.html">Case Studies</a></li>
       <li><a href="insights.html">Insights</a></li>
       <li><a href="leadership.html">Leadership</a></li>
@@ -39,7 +40,6 @@
   <a href="index.html">Home</a>
   <a href="solutions.html">Solutions</a>
   <a href="industries.html">Industries</a>
-  <a href="partnerships.html">Partnerships</a>
   <a href="case-studies.html">Case Studies</a>
   <a href="insights.html">Insights</a>
   <a href="leadership.html">Leadership</a>
@@ -655,32 +655,6 @@
   </div>
 </section>
 
-<!-- ── Featured Case Study ───────────────────────────────── -->
-<section class="section-sm" style="background: var(--bg-card);">
-  <div class="container">
-    <div class="text-center mb-8 reveal">
-      <p class="section-label">Featured Work</p>
-      <h2 class="section-title mt-4">Results We've <span class="gradient-text">Delivered</span></h2>
-    </div>
-    <div class="case-study-featured reveal">
-      <div>
-        <div style="display:flex; gap:12px; align-items:center; margin-bottom:16px;">
-          <span class="pill">Government</span>
-          <span class="pill pill-purple">Smart City</span>
-        </div>
-        <h3 style="font-size:1.5rem; color:var(--text-primary); font-family:'Space Grotesk',sans-serif; font-weight:700; margin-bottom:12px;">Traffic Intelligence System — Kuala Lumpur Smart City Initiative</h3>
-        <p class="body-text">Deployed an AI-powered traffic management platform integrating real-time CCTV analytics, adaptive signal control, and incident prediction across 200+ intersections. The system processes over 40,000 vehicle data points per minute to dynamically optimise traffic flow citywide.</p>
-        <a href="case-studies.html" class="btn btn-ghost mt-8" style="display:inline-flex;">Read Case Study →</a>
-      </div>
-      <div class="cs-featured-stat">
-        <div class="cs-featured-stat-number mono" data-count="32">32</div>
-        <div style="font-size:1rem; color:var(--text-primary); margin-top:4px; font-weight:600;">%</div>
-        <div class="cs-featured-stat-label">Reduction in<br>peak congestion</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ── Why Fortune ITS ───────────────────────────────────── -->
 <section class="section">
   <div class="container">
@@ -936,9 +910,7 @@
           <li><a href="leadership.html">About Us</a></li>
           <li><a href="leadership.html">Leadership</a></li>
       <li><a href="index.html#about">About</a></li>
-          <li><a href="partnerships.html">Partnerships</a></li>
           <li><a href="insights.html">Insights</a></li>
-          
         </ul>
       </div>
       <div class="footer-col">
@@ -973,5 +945,6 @@
 
 <script src="js/nav.js"></script>
 <script src="js/animations.js"></script>
+<script src="js/particles.js"></script>
 </body>
 </html>

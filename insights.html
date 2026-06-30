@@ -11,6 +11,8 @@
 </head>
 <body>
 
+<canvas id="particles-bg" aria-hidden="true"></canvas>
+
 <!-- ── Navigation ──────────────────────────────────────────── -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
@@ -21,7 +23,6 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="solutions.html">Solutions</a></li>
       <li><a href="industries.html">Industries</a></li>
-      <li><a href="partnerships.html">Partnerships</a></li>
       <li><a href="case-studies.html">Case Studies</a></li>
       <li><a href="insights.html">Insights</a></li>
       <li><a href="leadership.html">Leadership</a></li>
@@ -37,7 +38,6 @@
   <a href="index.html">Home</a>
   <a href="solutions.html">Solutions</a>
   <a href="industries.html">Industries</a>
-  <a href="partnerships.html">Partnerships</a>
   <a href="case-studies.html">Case Studies</a>
   <a href="insights.html">Insights</a>
   <a href="leadership.html">Leadership</a>
@@ -60,8 +60,13 @@
   <div class="container">
     <p class="section-label mb-6 reveal">Featured Article</p>
     <article class="featured-article reveal reveal-delay-1">
-      <div class="featured-article-img" aria-hidden="true">
-        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,111,97,0.3)" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M3 8h18M3 12h10"/></svg>
+      <div class="featured-article-img" style="padding:0; overflow:hidden; background:var(--bg-deep);">
+        <video
+          src="assets/videos/OAI.mp4"
+          autoplay muted loop playsinline preload="metadata"
+          style="width:100%; height:100%; object-fit:cover; display:block; transform:scale(1.4); transform-origin:center;"
+          aria-label="The operational AI stack demo">
+        </video>
       </div>
       <div class="featured-article-body">
         <div style="display:flex; gap:10px; align-items:center; margin-bottom:16px; flex-wrap:wrap;">
@@ -87,8 +92,13 @@
 
       <!-- Article 1 -->
       <article class="glass-card reveal">
-        <div class="article-img" aria-hidden="true">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,111,97,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="article-img" style="padding:0;">
+          <video
+            src="assets/videos/SAI.mp4"
+            autoplay muted loop playsinline preload="metadata"
+            style="width:100%; height:100%; object-fit:contain; display:block;"
+            aria-label="Sovereign AI infrastructure in Southeast Asia demo">
+          </video>
         </div>
         <div class="article-meta" style="margin-bottom:8px;">
           <span class="pill pill-sm" style="border-color:var(--accent-2); color:var(--accent-2);">Infrastructure</span>
@@ -103,8 +113,13 @@
 
       <!-- Article 2 -->
       <article class="glass-card reveal reveal-delay-1">
-        <div class="article-img" aria-hidden="true">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(124,58,237,0.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <div class="article-img" style="padding:0;">
+          <video
+            src="assets/videos/DH.mp4"
+            autoplay muted loop playsinline preload="metadata"
+            style="width:100%; height:100%; object-fit:contain; display:block;"
+            aria-label="Digital human enterprise interface demo">
+          </video>
         </div>
         <div class="article-meta" style="margin-bottom:8px;">
           <span class="pill pill-sm">Digital Humans</span>
@@ -119,8 +134,13 @@
 
       <!-- Article 3 -->
       <article class="glass-card reveal reveal-delay-2">
-        <div class="article-img" aria-hidden="true">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,111,97,0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        <div class="article-img" style="padding:0;">
+          <video
+            src="assets/videos/OI.mp4"
+            autoplay muted loop playsinline preload="metadata"
+            style="width:100%; height:100%; object-fit:contain; display:block;"
+            aria-label="Operational intelligence vs business intelligence demo">
+          </video>
         </div>
         <div class="article-meta" style="margin-bottom:8px;">
           <span class="pill pill-sm" style="border-color:var(--accent-2); color:var(--accent-2);">Strategy</span>
@@ -213,7 +233,7 @@
       </div>
       <div class="footer-col"><p class="footer-col-title">Solutions</p><ul><li><a href="industries.html">AI Infrastructure</a></li><li><a href="industries.html">Operational Intelligence</a></li><li><a href="industries.html">Smart City Systems</a></li><li><a href="industries.html">Digital Human Kiosks</a></li></ul></div>
       <div class="footer-col"><p class="footer-col-title">Company</p><ul><li><a href="leadership.html">About Us</a></li><li><a href="leadership.html">Leadership</a></li>
-      <li><a href="index.html#about">About</a></li><li><a href="partnerships.html">Partnerships</a></li><li><a href="insights.html">Insights</a></li></ul></div>
+      <li><a href="index.html#about">About</a></li><li><a href="insights.html">Insights</a></li></ul></div>
       <div class="footer-col"><p class="footer-col-title">Industries</p><ul><li><a href="industries.html">Healthcare</a></li><li><a href="industries.html">Government</a></li><li><a href="industries.html">Property</a></li><li><a href="industries.html">Finance</a></li></ul></div>
       <div class="footer-col"><p class="footer-col-title">Connect</p><ul><li><a href="contact.html">Let's Talk</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="mailto:info@fortuneits.com">info@fortuneits.com</a></li></ul></div>
     </div>
@@ -226,5 +246,6 @@
 
 <script src="js/nav.js"></script>
 <script src="js/animations.js"></script>
+<script src="js/particles.js"></script>
 </body>
 </html>

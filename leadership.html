@@ -44,34 +44,6 @@
       background: linear-gradient(90deg, #7C3AED, #FF6F61);
     }
 
-    /* Circular photo */
-    .leader-photo {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      margin-bottom: 20px;
-      border: 3px solid rgba(255,255,255,0.08);
-      display: block;
-    }
-
-    /* Initials fallback shown only when no photo */
-    .leader-initials {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 2rem;
-      color: #ffffff;
-      margin-bottom: 20px;
-      flex-shrink: 0;
-    }
-
     .leader-name {
       font-family: 'Space Grotesk', sans-serif;
       font-size: 1.375rem;
@@ -152,6 +124,8 @@
 </head>
 <body>
 
+<canvas id="particles-bg" aria-hidden="true"></canvas>
+
 <!-- ── Navigation ──────────────────────────────────────────── -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
@@ -162,7 +136,6 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="solutions.html">Solutions</a></li>
       <li><a href="industries.html">Industries</a></li>
-      <li><a href="partnerships.html">Partnerships</a></li>
       <li><a href="case-studies.html">Case Studies</a></li>
       <li><a href="insights.html">Insights</a></li>
       <li><a href="leadership.html">Leadership</a></li>
@@ -178,7 +151,6 @@
   <a href="index.html">Home</a>
   <a href="solutions.html">Solutions</a>
   <a href="industries.html">Industries</a>
-  <a href="partnerships.html">Partnerships</a>
   <a href="case-studies.html">Case Studies</a>
   <a href="insights.html">Insights</a>
   <a href="leadership.html">Leadership</a>
@@ -201,17 +173,9 @@
   <div class="container">
     <div class="leader-grid">
 
-      <!-- Umesh Chawda — COO -->
+      <!-- Chawda.U — COO -->
       <div class="leader-card reveal">
-        <img
-          src="assets/team/umesh-chawda.jpg"
-          alt="Umesh Chawda — Chief Operating Officer"
-          class="leader-photo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        />
-        <div class="leader-initials" style="background:linear-gradient(135deg,#7C3AED,#5B21B6); display:none;">UC</div>
-
-        <h2 class="leader-name">Umesh Chawda</h2>
+        <h2 class="leader-name">Chawda.U</h2>
         <p class="leader-title purple">Chief Operating Officer</p>
 
         <p class="leader-bio">Leads AI transformation strategy, intelligent ecosystem architecture, operational intelligence initiatives, and innovation frameworks. A pioneer in developing large-scale AI operational systems for enterprise and government environments.</p>
@@ -224,26 +188,18 @@
         </div>
 
         <div class="leader-socials">
-          <a href="#" class="leader-social-btn" aria-label="Umesh Chawda on LinkedIn">
+          <a href="#" class="leader-social-btn" aria-label="Chawda.U on LinkedIn">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
-          <a href="#" class="leader-social-btn" aria-label="Umesh Chawda on Twitter">
+          <a href="#" class="leader-social-btn" aria-label="Chawda.U on Twitter">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/></svg>
           </a>
         </div>
       </div>
 
-      <!-- Reza Yousefi — CTO -->
+      <!-- Yousefi.R — CTO -->
       <div class="leader-card reveal reveal-delay-1">
-        <img
-          src="assets/team/reza-yousefi.jpg"
-          alt="Reza Yousefi — Chief Technology Officer"
-          class="leader-photo"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        />
-        <div class="leader-initials" style="background:linear-gradient(135deg,#FF6F61,#E05A50); display:none;">RY</div>
-
-        <h2 class="leader-name">Reza Yousefi</h2>
+        <h2 class="leader-name">Yousefi.R</h2>
         <p class="leader-title coral">Chief Technology Officer</p>
 
         <p class="leader-bio">Leads systems engineering, AI infrastructure architecture, cloud orchestration, and intelligent platform execution. Specialises in building scalable, enterprise-grade AI infrastructure ecosystems that power operational transformation.</p>
@@ -256,10 +212,10 @@
         </div>
 
         <div class="leader-socials">
-          <a href="#" class="leader-social-btn" aria-label="Reza Yousefi on LinkedIn">
+          <a href="#" class="leader-social-btn" aria-label="Yousefi.R on LinkedIn">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
-          <a href="#" class="leader-social-btn" aria-label="Reza Yousefi on Twitter">
+          <a href="#" class="leader-social-btn" aria-label="Yousefi.R on Twitter">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/></svg>
           </a>
         </div>
@@ -304,7 +260,6 @@
           <li><a href="leadership.html">About Us</a></li>
           <li><a href="leadership.html">Leadership</a></li>
       <li><a href="index.html#about">About</a></li>
-          <li><a href="partnerships.html">Partnerships</a></li>
           <li><a href="insights.html">Insights</a></li>
         </ul>
       </div>
@@ -338,5 +293,6 @@
 
 <script src="js/nav.js"></script>
 <script src="js/animations.js"></script>
+<script src="js/particles.js"></script>
 </body>
 </html>
