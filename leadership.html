@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadership — Fortune ITS</title>
+  <meta name="description" content="Meet the Fortune ITS leadership team — building enterprise AI infrastructure across Malaysia and Southeast Asia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── Leadership-specific styles ─────────────────────────── */
+    .leader-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .leader-card {
+      background: #1A1F2B;
+      border-radius: 16px;
+      padding: 40px 32px 36px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .leader-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    }
+
+    /* Gradient top border */
+    .leader-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #7C3AED, #FF6F61);
+    }
+
+    /* Circular photo */
+    .leader-photo {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 20px;
+      border: 3px solid rgba(255,255,255,0.08);
+      display: block;
+    }
+
+    /* Initials fallback shown only when no photo */
+    .leader-initials {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+
+    .leader-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: #EDF2F4;
+      margin-bottom: 6px;
+    }
+
+    .leader-title {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .leader-title.coral  { color: #FF6F61; }
+    .leader-title.purple { color: #7C3AED; }
+
+    .leader-bio {
+      font-size: 0.9rem;
+      color: #A0AEC0;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* Tag pills */
+    .leader-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+    .leader-tag {
+      font-size: 0.75rem;
+      padding: 5px 14px;
+      border-radius: 999px;
+      border: 1px solid;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+    }
+    .leader-tag.coral {
+      border-color: rgba(255, 111, 97, 0.5);
+      color: #FF6F61;
+      background: rgba(255, 111, 97, 0.07);
+    }
+    .leader-tag.purple {
+      border-color: rgba(124, 58, 237, 0.5);
+      color: #9B72F8;
+      background: rgba(124, 58, 237, 0.07);
+    }
+
+    /* Social icons */
+    .leader-socials {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .leader-social-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      border: 1px solid #2B2D42;
+      background: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #A0AEC0;
+      transition: all 0.2s ease;
+    }
+    .leader-social-btn:hover {
+      border-color: var(--accent-1);
+      color: var(--accent-1);
+    }
+
+    @media (max-width: 640px) {
+      .leader-grid { grid-template-columns: 1fr; max-width: 420px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────── -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Fortune ITS home">
+      <img src="assets/logo.png" alt="Fortune ITS" style="height:72px;width:auto;" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="solutions.html">Solutions</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="partnerships.html">Partnerships</a></li>
+      <li><a href="case-studies.html">Case Studies</a></li>
+      <li><a href="insights.html">Insights</a></li>
+      <li><a href="leadership.html">Leadership</a></li>
+      <li><a href="index.html#about">About</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary nav-cta">Let's Talk</a>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="industries.html">Industries</a>
+  <a href="partnerships.html">Partnerships</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="insights.html">Insights</a>
+  <a href="leadership.html">Leadership</a>
+  <a href="index.html#about">About</a>
+  <a href="contact.html" class="btn btn-primary">Let's Talk</a>
+</div>
+
+<!-- ── Page Hero ────────────────────────────────────────────── -->
+<header class="page-hero">
+  <div class="container page-hero-content text-center">
+    <p class="section-label reveal" style="display:inline-flex; justify-content:center;">Our People</p>
+    <h1 class="section-title mt-4 reveal reveal-delay-1" style="font-size:clamp(2rem,5vw,3.5rem);">The Minds Behind <span class="gradient-text">Fortune ITS</span></h1>
+    <p class="body-text mt-4 reveal reveal-delay-2" style="max-width:560px; margin-left:auto; margin-right:auto;">A team of AI practitioners, enterprise strategists, and domain specialists united by a single conviction: that AI's highest purpose is operational transformation at scale.</p>
+  </div>
+</header>
+
+<main>
+<!-- ── Team Grid ─────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="leader-grid">
+
+      <!-- Umesh Chawda — COO -->
+      <div class="leader-card reveal">
+        <img
+          src="assets/team/umesh-chawda.jpg"
+          alt="Umesh Chawda — Chief Operating Officer"
+          class="leader-photo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="leader-initials" style="background:linear-gradient(135deg,#7C3AED,#5B21B6); display:none;">UC</div>
+
+        <h2 class="leader-name">Umesh Chawda</h2>
+        <p class="leader-title purple">Chief Operating Officer</p>
+
+        <p class="leader-bio">Leads AI transformation strategy, intelligent ecosystem architecture, operational intelligence initiatives, and innovation frameworks. A pioneer in developing large-scale AI operational systems for enterprise and government environments.</p>
+
+        <div class="leader-tags">
+          <span class="leader-tag purple">AI Strategy</span>
+          <span class="leader-tag purple">Ecosystem Architecture</span>
+          <span class="leader-tag purple">Operational Intelligence</span>
+          <span class="leader-tag purple">Innovation Frameworks</span>
+        </div>
+
+        <div class="leader-socials">
+          <a href="#" class="leader-social-btn" aria-label="Umesh Chawda on LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="leader-social-btn" aria-label="Umesh Chawda on Twitter">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Reza Yousefi — CTO -->
+      <div class="leader-card reveal reveal-delay-1">
+        <img
+          src="assets/team/reza-yousefi.jpg"
+          alt="Reza Yousefi — Chief Technology Officer"
+          class="leader-photo"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="leader-initials" style="background:linear-gradient(135deg,#FF6F61,#E05A50); display:none;">RY</div>
+
+        <h2 class="leader-name">Reza Yousefi</h2>
+        <p class="leader-title coral">Chief Technology Officer</p>
+
+        <p class="leader-bio">Leads systems engineering, AI infrastructure architecture, cloud orchestration, and intelligent platform execution. Specialises in building scalable, enterprise-grade AI infrastructure ecosystems that power operational transformation.</p>
+
+        <div class="leader-tags">
+          <span class="leader-tag coral">Systems Engineering</span>
+          <span class="leader-tag coral">AI Infrastructure</span>
+          <span class="leader-tag coral">Cloud Orchestration</span>
+          <span class="leader-tag coral">Platform Execution</span>
+        </div>
+
+        <div class="leader-socials">
+          <a href="#" class="leader-social-btn" aria-label="Reza Yousefi on LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="leader-social-btn" aria-label="Reza Yousefi on Twitter">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Fortune ITS" class="footer-logo-img" />
+        <p class="footer-tagline">AI Infrastructure &amp; Operational Intelligence<br>Kuala Lumpur, Malaysia</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Solutions</p>
+        <ul>
+          <li><a href="industries.html">AI Infrastructure</a></li>
+          <li><a href="industries.html">Operational Intelligence</a></li>
+          <li><a href="industries.html">Smart City Systems</a></li>
+          <li><a href="industries.html">Digital Human Kiosks</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Company</p>
+        <ul>
+          <li><a href="leadership.html">About Us</a></li>
+          <li><a href="leadership.html">Leadership</a></li>
+      <li><a href="index.html#about">About</a></li>
+          <li><a href="partnerships.html">Partnerships</a></li>
+          <li><a href="insights.html">Insights</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Industries</p>
+        <ul>
+          <li><a href="industries.html">Healthcare</a></li>
+          <li><a href="industries.html">Government</a></li>
+          <li><a href="industries.html">Property</a></li>
+          <li><a href="industries.html">Finance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-title">Connect</p>
+        <ul>
+          <li><a href="contact.html">Let's Talk</a></li>
+          <li><a href="case-studies.html">Case Studies</a></li>
+          <li><a href="mailto:info@fortuneits.com">info@fortuneits.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Fortune ITS Sdn Bhd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/nav.js"></script>
+<script src="js/animations.js"></script>
+</body>
+</html>
